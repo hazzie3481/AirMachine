@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="com.example.hireme">
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.example.hireme.RegisterActivity"
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity
+            android:name="com.example.hireme.LoginActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.hireme.ActivatedActivity"></activity>
+        <activity android:name="com.example.hireme.DeActivatedActivity"></activity>
+        <activity android:name="com.example.hireme.ForgotPasswordActivity"></activity>
+        <activity android:name=".UserManagementActivity"></activity>
+    </application>
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <dist:module dist:instant="true" />
+
+</manifest>
